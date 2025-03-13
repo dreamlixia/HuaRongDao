@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#puzzle {
+    width: 400px;
+    height: 400px;
+    display: inline-grid;
+    --grid-columns: 4;
+    --grid-rows: 4;
+    grid-template-columns: repeat(var(--grid-columns), minmax(50px, 1fr));
+    grid-template-rows: repeat(var(--grid-rows), minmax(50px, 1fr));
+    gap: 5px;
+}
+
+.tile {
+    --grid-columns: 4;
+    --grid-rows: 4;
+    background-image: url('huangyouxiaoxiong2.jpeg');
+    background-size: calc(100% * var(--grid-columns)) calc(100% * var(--grid-rows));
+    cursor: pointer;
+}
+
+.empty {
+    background: none;
+    cursor: default;
+}
+
+#original-image {
+    max-width: 400px;
+    height: auto;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
